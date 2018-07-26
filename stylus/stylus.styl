@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed");
+html, body
+  font-family 'Open Sans', cursive !important
+  margin 0px
+  padding 0px
+  height 100%
+  // overflow hidden
+  background linear-gradient(to bottom, #ffffff 0%, #dedede 100%)
+  // background-image url(../img/bg2.jpg)
+  background-position center center
+  background-repeat  no-repeat
+  background-attachment: fixed
+  background-size  cover
+
+#principal
+  min-height 100%
+  display flex
+  // margin-left 0%
+  align-items center
+  flex-direction row
+
+#login
+  margin auto
+  width 300px
+  background linear-gradient(to bottom, #ffffff 0%, #dedede 100%)
+  background-color #f6f6f6
+  padding 15px 15px 20px 15px
+  box-shadow: 1px 15px 30px -1px rgb(211, 211, 211);
+
+//  ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬ home ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+.cardHome
+  margin 20px
+
+//  ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬ dashboard ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+#main
+  display grid
+  grid-template-rows: 100vh
+  grid-template-columns 30vh
+  grid-template-areas "painel conteudo"
+
+.painel
+    grid-area painel
+    background-color #FAB
+
+.conteudo
+    grid-area conteudo
+    background-color #FFB
+
+nav
+  box-shadow 1px 5px 20px -1px rgb(180, 180, 180)
+  
+
+#ondeestou
+  margin-top 50px
+  box-shadow none !important
+
+#painelPrincipal
+  padding 15px
+
+//  ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬ produtos ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+#navSuperior
+  background-color #086fd9 !important
+  z-index 100
+  & a
+    color #FFF
+    margin-right 20px
+    &:hover
+      color #395bb2
+      background-color #FFF
+
+footer
+  position fixed
+  bottom 0
+  width 100%
+  box-shadow 1px 5px 20px -1px rgb(180, 180, 180)
+  z-index 99
+  background-color #086fd9 !important
+//  ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬ produtos cadastrar ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+.botoes
+  width 150px !important
+  margin 15px
+  box-shadow 1px 5px 20px -1px rgb(180, 180, 180)
+  &:hover
+    background-color #d1ecf1 !important
+    border-color #086fd9 !important
+    color #086fd9 !important
+    font-weight bold !important
+
+.obg
+    color #F00 
+

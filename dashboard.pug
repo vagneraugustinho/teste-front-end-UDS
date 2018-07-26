@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+html(lang="pt-br")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Cadastrar produtos
+        link(rel="stylesheet", href="../css/stylus.css")
+        link(rel="stylesheet", href="../node_modules/bootstrap/dist/css/bootstrap.css")
+        link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.1.1/css/all.css")
+    body
+        nav.navbar.navbar-expand-lg.navbar-light.bg-primary#navSuperior
+            div.container
+                a(href="https://uds.com.br/").navbar-brand
+                    strong UDS
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+                div.collapse.navbar-collapse#navbarSupportedContent
+                    ul.navbar-nav.mr-auto
+                        li.nav-item
+                            a(href="#").nav-link <i class="fas fa-home"></i> Home
+                    ul.navbar-nav.ml-auto
+                        li.nav-item
+                            a(href="../Readme.pdf").nav-link <i class="fas fa-question"></i> Ajuda
+                        li.nav-item
+                            a(href="http://").nav-link <i class="fas fa-user"></i> email@email.com
+                            
+                        li( data-toggle="tooltip" data-placement="bottom" title="Encerrar").nav-item
+                            a(href="index.html").nav-link <i class="fas fa-power-off"></i>
+                                                       
+        div.container
+            nav(aria-label="breadcrumb")#ondeestou
+                ol.breadcrumb.alert.alert-info
+                    li(aria-current="page").breadcrumb-item 
+                        strong Você está em
+                    li(aria-current="page").breadcrumb-item Home
+
+            main
+                div.row
+                    div(style="max-width: 18rem;").card.shadow-sm.mb-5.bg-white.rounded.text-center.cardHome 
+                        div.card-header                             
+                            h1.text-center
+                                <i class="fas fa-box-open"></i>
+                        div.card-body
+                            div.card-title 
+                            h5 Produtos
+                            a(href="produtos.html").btn.btn-primary.botoes Acessar
+                    div(style="max-width: 18rem;").card.shadow-sm.mb-5.bg-white.rounded.text-center.cardHome 
+                        div.card-header                             
+                            h1.text-center
+                                <i class="fas fa-list-ol"></i>
+                        div.card-body
+                            div.card-title 
+                            h5 Pedidos
+                            a(href="pedidos.html").btn.btn-primary.botoes Acessar
+                    div(style="max-width: 18rem;").card.shadow-sm.mb-5.bg-white.rounded.text-center.cardHome 
+                        div.card-header                             
+                            h1.text-center
+                                <i class="fas fa-balance-scale"></i>
+                        div.card-body
+                            div.card-title 
+                            h5 Históricos
+                            a(href="#" data-toggle="tooltip" data-placement="bottom" title="Exemplo para popular tela de home").btn.btn-primary.botoes Acessar
+                    div(style="max-width: 18rem;").card.shadow-sm.mb-5.bg-white.rounded.text-center.cardHome 
+                        div.card-header                             
+                            h1.text-center
+                                <i class="fas fa-cogs"></i>
+                        div.card-body
+                            div.card-title 
+                            h5 Ferramentas
+                            a(href="#" data-toggle="tooltip" data-placement="bottom" title="Exemplo para popular tela de home").btn.btn-primary.botoes Acessar
+                            
+                             
+    
+    script(src="../node_modules/jquery/dist/jquery.min.js")    
+    script(src="../node_modules/bootstrap/dist/js/bootstrap.min.js")
+    script(src="../js/js.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js")
+    script.
+            $(function () {
+        $('[data-toggle="popover"]').popover()
+        })
+            $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        })
+           

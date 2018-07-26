@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang="pt-br")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Login
+        link(rel="stylesheet", href="../css/stylus.css")
+        link(rel="stylesheet", href="../node_modules/bootstrap/dist/css/bootstrap.css")
+        link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.1.1/css/all.css")
+    body
+        div.container#principal
+            div.form-control#login 
+                form(action="../.html/dashboard.html" metod="post" name="formulario")
+                    label Login
+                    div.input-group.mb-3 
+                        div.input-group-prepend 
+                            span.input-group-text
+                                i.fas.fa-envelope
+                        input(type="email" placeholder="email@exemplo.com" value="marcos@gmail.com").form-control
+                    label Senha
+                    div.input-group.mb-3 
+                        div.input-group-prepend 
+                            span.input-group-text#basic-addon1 
+                                i.fas.fa-key
+                        input(type="password" value="123456789").form-control
+                        div(data-toggle="tooltip" data-placement="bottom" title="Esqueceu a senha? clique aqui.").input-group-append 
+                            span.input-group-text#basic-addon1 
+                                a(href="#" onclick="atencao();")
+                                   i.fas.fa-question
+                    
+                    button.btn.btn-primary.form-control(type="submit") Entrar
+
+        script.
+            $(function () {
+                $('[data-toggle="popover"]').popover()
+                })
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+                })
+            function atencao(){
+                alert('O campo para digitar email para redefinição de senha está indisponível!')
+            }
+                     
+    script(src="../node_modules/jquery/dist/jquery.min.js")    
+    script(src="../node_modules/bootstrap/dist/js/bootstrap.min.js")
+    script(src="../js/js.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js")
+    script.
+            $(function () {
+        $('[data-toggle="popover"]').popover()
+        })
+            $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        })

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/stylus.css"/>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"/>
+  </head>
+  <body>
+    <div class="container" id="principal">
+      <div class="form-control" id="login"> 
+        <form action="../.html/dashboard.html" metod="post" name="formulario">
+          <label>Login</label>
+          <div class="input-group mb-3"> 
+            <div class="input-group-prepend"> <span class="input-group-text"><i class="fas fa-envelope"></i></span></div>
+            <input class="form-control" type="email" placeholder="email@exemplo.com" value="marcos@gmail.com"/>
+          </div>
+          <label>Senha</label>
+          <div class="input-group mb-3"> 
+            <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon1"> <i class="fas fa-key"></i></span></div>
+            <input class="form-control" type="password" value="123456789"/>
+            <div class="input-group-append" data-toggle="tooltip" data-placement="bottom" title="Esqueceu a senha? clique aqui."> <span class="input-group-text" id="basic-addon1"> <a href="#" onclick="atencao();"><i class="fas fa-question"></i></a></span></div>
+          </div>
+          <button class="btn btn-primary form-control" type="submit">Entrar</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      $(function () {
+          $('[data-toggle="popover"]').popover()
+          })
+      $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+          })
+      function atencao(){
+          alert('O campo para digitar email para redefinição de senha está indisponível!')
+      }
+               
+    </script>
+  </body>
+  <script src="../node_modules/jquery/dist/jquery.min.js">   </script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../js/js.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  <script>
+        $(function () {
+    $('[data-toggle="popover"]').popover()
+    })
+        $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</html>

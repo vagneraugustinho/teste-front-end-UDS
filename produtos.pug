@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+html(lang="pt-br")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Produtos
+        link(rel="stylesheet", href="../css/stylus.css")
+        link(rel="stylesheet", href="../node_modules/bootstrap/dist/css/bootstrap.css")
+        link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.1.1/css/all.css")
+    body
+        nav.navbar.navbar-expand-lg.navbar-light.bg-primary#navSuperior
+            div.container
+                a(href="https://uds.com.br/").navbar-brand 
+                    strong UDS
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+                div.collapse.navbar-collapse#navbarSupportedContent
+                    ul.navbar-nav.mr-auto
+                        li.nav-item
+                            a(href="dashboard.html").nav-link <i class="fas fa-home"></i> Home
+                    ul.navbar-nav.ml-auto
+                        li.nav-item
+                            a(href="http://").nav-link <i class="fas fa-box-open"></i> Total/produtos 
+                                strong 5
+                        li.nav-item
+                            a(href="http://").nav-link <i class="fas fa-user"></i> email@email.com
+                            
+                        li( data-toggle="tooltip" data-placement="bottom" title="Encerrar").nav-item
+                            a(href="index.html").nav-link <i class="fas fa-power-off"></i>
+                                                       
+        div.container
+            nav(aria-label="breadcrumb")#ondeestou
+                ol.breadcrumb.alert.alert-info
+                    li(aria-current="page").breadcrumb-item 
+                        strong Você está em
+                    li(aria-current="page").breadcrumb-item.active Produtos
+
+            main
+                div.card#painelPrincipal.shadow-lg.p-3.mb-5.bg-white.rounded 
+                    div.card-header
+                        div.col-md-8
+                            form(action="" metod="post" name="")
+                                div.input-group.mb-3 
+                                    div(data-toggle="tooltip" data-placement="bottom" title="Cadastrar novo produto").input-group-prepend
+                                         span.input-group-text
+                                            a(href="produto-cadastrar.html")
+                                                i.fas.fa-plus
+                                    input(type="text" placeholder="Pesquisar produtos" value="Coca-cola lata 350ml").form-control
+                                    div(data-toggle="tooltip" data-placement="bottom" title="Pesquisar produto").input-group-append 
+                                        span.input-group-text
+                                            i.fas.fa-search
+                    div.card-body
+                        table.table.table-hover#tabela
+                            thead.thead-light
+                                tr
+                                    th(scope="col") Código
+                                    th(scope="col") Nome do produto
+                                    th(scope="col") Preço
+                            tbody
+                                tr
+                                    th(scope="row")#cod 
+                                    
+
+    
+    script(src="../node_modules/jquery/dist/jquery.min.js")    
+    script(src="../node_modules/bootstrap/dist/js/bootstrap.min.js")
+    script(src="../js/localstorage.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js")
+    script.
+            $(function () {
+        $('[data-toggle="popover"]').popover()
+        })
+            $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        })
+
+         $(function () {
+            $.get('https://5b58d4816ab251001421b631.mockapi.io/produtos', function(data){
+                data.forEach(function(produtos){
+                //- $('#kkk').html(JSON.stringify(data))
+                //- $('#cod').append(produtos.id + '<br>')
+                //- $('#cod').append(produtos.id + '<br>')
+                var newRow = $("<tr>");
+                    var cols = "";	
+                    cols += '<td>&nbsp;'+ produtos.id +'</td>';
+                    cols += '<td>&nbsp;'+ produtos.name +'</td>';
+                    cols += '<td>&nbsp;'+ produtos.Valor +'</td>';
+                    cols += '<td>';
+                    cols += '</td>';	
+                    newRow.append(cols);
+                    $("#tabela").append(newRow);	
+                    return false;
+                })
+            });              
+        });(jQuery);
+
+        //- $(function($) {	  
+        //-         AddTableRow = function() {	
+        //-             var url = 'https://5b58d4816ab251001421b631.mockapi.io/produtos';
+        //-             var newRow = $("<tr>");
+        //-             var cols = "";	
+        //-             cols += '<td>&nbsp;'+url+'</td>';
+        //-             cols += '<td>&nbsp;</td>';
+        //-             cols += '<td>&nbsp;</td>';
+        //-             cols += '<td>';
+        //-             cols += '</td>';	
+        //-             newRow.append(cols);
+        //-             $("#tabela").append(newRow);	
+        //-             return false;
+        //-         };
+        //-     });(jQuery);

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+html(lang="pt-br")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Cadastrar pedidos
+        link(rel="stylesheet", href="../css/stylus.css")
+        link(rel="stylesheet", href="../node_modules/bootstrap/dist/css/bootstrap.css")
+        link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.1.1/css/all.css")
+    body
+        nav.navbar.navbar-expand-lg.navbar-light.bg-primary#navSuperior
+            div.container
+                a(href="https://uds.com.br/").navbar-brand
+                    strong UDS
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+                div.collapse.navbar-collapse#navbarSupportedContent
+                    ul.navbar-nav.mr-auto
+                        li.nav-item
+                            a(href="dashboard.html").nav-link <i class="fas fa-home"></i> Home
+                    ul.navbar-nav.ml-auto
+                        li.nav-item
+                            a(href="http://").nav-link <i class="fas fa-user"></i> email@email.com
+                            
+                        li( data-toggle="tooltip" data-placement="bottom" title="Encerrar").nav-item
+                            a(href="index.html").nav-link <i class="fas fa-power-off"></i>
+                                                       
+        div.container
+            nav(aria-label="breadcrumb")#ondeestou
+                ol.breadcrumb.alert.alert-info
+                    li(aria-current="page").breadcrumb-item 
+                        strong Você está em
+                    li(aria-current="page").breadcrumb-item Pedidos
+                    li(aria-current="page").breadcrumb-item.active Cadastrar pedidos
+
+            main
+                div.card#painelPrincipal.shadow-lg.p-3.mb-5.bg-white.rounded 
+                    div.card-header
+                        div.col-md-8 Campos obrigatórios
+                            span.obg *
+                            
+                    div.card-body
+                        div
+                            form(action="pedidos.html" metod="post" name="formulario")
+                                div.row
+                                    div.col-md-6
+                                        div.form-group
+                                            label Nome do cliente
+                                            span.obg *
+                                            input(type="text" placeholder="Ex: Maria").form-control#nomeCliente
+                                    div.col-md-6                                        
+                                        label Descrição do pedido
+                                        span.obg *
+                                        div.input-group.mb-3 
+                                            input(type="text" placeholder="Buscar produtos").form-control#descProduto
+                                            div(data-toggle="tooltip" data-placement="bottom" title="Buscar produtos").input-group-append
+                                                span.input-group-text
+                                                    a(href="produtos.html" data-toggle="modal" data-target="#buscaProdutos")
+                                                        i.fas.fa-search
+                                div.row
+                                    div.col-md-4
+                                        div.form-group
+                                            label Valor
+                                            input(type="number" step="0.01" disabled).form-control#valorProduto
+                                    div.col-md-4
+                                        div.form-group
+                                            label Quantidade
+                                            span.obg *
+                                            input(type="number" placeholder="Ex: 2").form-control#qtdeProduto
+                                    div.col-md-4
+                                        div.form-group
+                                            label Subtotal
+                                            input(type="text" disabled).form-control#subtotalProduto
+                                        
+                                hr
+                                div.row.justify-content-end
+                                    div.col-md3
+                                        button.btn.btn-success.form-control.botoes(type="button")#btn_cadastrarPedido Cadastrar
+                                    div.col-md3
+                                        a(href="pedidos.html")
+                                            button.btn.btn-primary.form-control.btn.btn-danger.botoes(type="button") Cancelar
+
+    //-¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬ produtos modal ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+    div( tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true").modal.fade#buscaProdutos
+        div(role="document").modal-dialog.modal-dialog-centered
+            div.modal-content
+                div.modal-header
+                    h5.modal-title#exampleModalCenterTitle Lista de produtos
+                div.modal-body 
+                    div.card
+                        table.table.table-hover
+                            thead.thead-light
+                                tr
+                                    th(scope="col") Código
+                                    th(scope="col") Selecionar
+                                    th(scope="col") Nome do produto
+                                    th(scope="col") Preço
+                            tbody
+                                tr
+                                    th(scope="row") 0001
+                                    td.text-center
+                                        div.form-check
+                                            input(type="checkbox").form-check-input
+                                    td Coca-cola
+                                    td R$ 5,90
+                                tr
+                                    th(scope="col") 0002
+                                    td.text-center
+                                        div.form-check
+                                            input(type="checkbox").form-check-input
+                                    td X-Bacon
+                                    td R$ 14,90
+                                tr
+                                    th(scope="row") 0003
+                                    td.text-center
+                                        div.form-check
+                                            input(type="checkbox").form-check-input
+                                    td Suco de laranja
+                                    td R$ 3,99
+                                tr
+                                    th(scope="row") 0004
+                                    td.text-center
+                                        div.form-check
+                                            input(type="checkbox").form-check-input
+                                    td Cerveja Baden Pilsen
+                                    td R$ 18,00
+                                tr
+                                    th(scope="row") 0005
+                                    td.text-center
+                                        div.form-check
+                                            input(type="checkbox").form-check-input
+                                    td Camarão - porção 400g
+                                    td R$ 59,99
+                div.modal-footer 
+                    button(type="button" data-toggle="tooltip" data-placement="bottom" title="Inserir este produto no pedido").btn.btn-success.botoes#btn_inserirPedido Inserir
+                    button(type="button" data-dismiss="modal").btn.btn-danger.botoes Cancelar
+    
+    script(src="../node_modules/jquery/dist/jquery.min.js")    
+    script(src="../node_modules/bootstrap/dist/js/bootstrap.min.js")
+    script(src="../js/localstorage.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js")
+    script.
+            $(function () {
+        $('[data-toggle="popover"]').popover()
+        })
+            $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        })

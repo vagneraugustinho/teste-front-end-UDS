@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Cadastrar produtos</title>
+    <link rel="stylesheet" href="../css/stylus.css"/>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary" id="navSuperior">
+      <div class="container"><a class="navbar-brand" href="https://uds.com.br/"><strong>UDS</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a></li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="../Readme.pdf"><i class="fas fa-question"></i> Ajuda</a></li>
+            <li class="nav-item"><a class="nav-link" href="http://"><i class="fas fa-user"></i> email@email.com</a></li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Encerrar"><a class="nav-link" href="index.html"><i class="fas fa-power-off"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <nav aria-label="breadcrumb" id="ondeestou">
+        <ol class="breadcrumb alert alert-info">
+          <li class="breadcrumb-item" aria-current="page"> <strong>Você está em</strong></li>
+          <li class="breadcrumb-item" aria-current="page">Home</li>
+        </ol>
+      </nav>
+      <main>
+        <div class="row">
+          <div class="card shadow-sm mb-5 bg-white rounded text-center cardHome" style="max-width: 18rem;"> 
+            <div class="card-header">                            
+              <h1 class="text-center"><i class="fas fa-box-open"></i></h1>
+            </div>
+            <div class="card-body">
+              <div class="card-title"> </div>
+              <h5>Produtos</h5><a class="btn btn-primary botoes" href="produtos.html">Acessar</a>
+            </div>
+          </div>
+          <div class="card shadow-sm mb-5 bg-white rounded text-center cardHome" style="max-width: 18rem;"> 
+            <div class="card-header">                            
+              <h1 class="text-center"><i class="fas fa-list-ol"></i></h1>
+            </div>
+            <div class="card-body">
+              <div class="card-title"> </div>
+              <h5>Pedidos</h5><a class="btn btn-primary botoes" href="pedidos.html">Acessar</a>
+            </div>
+          </div>
+          <div class="card shadow-sm mb-5 bg-white rounded text-center cardHome" style="max-width: 18rem;"> 
+            <div class="card-header">                            
+              <h1 class="text-center"><i class="fas fa-balance-scale"></i></h1>
+            </div>
+            <div class="card-body">
+              <div class="card-title"> </div>
+              <h5>Históricos</h5><a class="btn btn-primary botoes" href="#" data-toggle="tooltip" data-placement="bottom" title="Exemplo para popular tela de home">Acessar</a>
+            </div>
+          </div>
+          <div class="card shadow-sm mb-5 bg-white rounded text-center cardHome" style="max-width: 18rem;"> 
+            <div class="card-header">                            
+              <h1 class="text-center"><i class="fas fa-cogs"></i></h1>
+            </div>
+            <div class="card-body">
+              <div class="card-title"> </div>
+              <h5>Ferramentas</h5><a class="btn btn-primary botoes" href="#" data-toggle="tooltip" data-placement="bottom" title="Exemplo para popular tela de home">Acessar</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="../node_modules/jquery/dist/jquery.min.js">   </script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../js/js.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  <script>
+        $(function () {
+    $('[data-toggle="popover"]').popover()
+    })
+        $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+       
+  </script>
+</html>

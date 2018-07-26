@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed");
+html,
+body {
+  font-family: 'Open Sans', cursive !important;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  background: linear-gradient(to bottom, #fff 0%, #dedede 100%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#principal {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+#login {
+  margin: auto;
+  width: 300px;
+  background: linear-gradient(to bottom, #fff 0%, #dedede 100%);
+  background-color: #f6f6f6;
+  padding: 15px 15px 20px 15px;
+  box-shadow: 1px 15px 30px -1px #d3d3d3;
+}
+.cardHome {
+  margin: 20px;
+}
+#main {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: 30vh;
+  grid-template-areas: "painel conteudo";
+}
+.painel {
+  grid-area: painel;
+  background-color: #fab;
+}
+.conteudo {
+  grid-area: conteudo;
+  background-color: #ffb;
+}
+nav {
+  box-shadow: 1px 5px 20px -1px #b4b4b4;
+}
+#ondeestou {
+  margin-top: 50px;
+  box-shadow: none !important;
+}
+#painelPrincipal {
+  padding: 15px;
+}
+#navSuperior {
+  background-color: #086fd9 !important;
+  z-index: 100;
+}
+#navSuperior a {
+  color: #fff;
+  margin-right: 20px;
+}
+#navSuperior a:hover {
+  color: #395bb2;
+  background-color: #fff;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 1px 5px 20px -1px #b4b4b4;
+  z-index: 99;
+  background-color: #086fd9 !important;
+}
+.botoes {
+  width: 150px !important;
+  margin: 15px;
+  box-shadow: 1px 5px 20px -1px #b4b4b4;
+}
+.botoes:hover {
+  background-color: #d1ecf1 !important;
+  border-color: #086fd9 !important;
+  color: #086fd9 !important;
+  font-weight: bold !important;
+}
+.obg {
+  color: #f00;
+}
